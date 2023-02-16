@@ -377,7 +377,7 @@ ApplicationWindow {
                 y: -2
                 width: 1230
                 height: 206
-                source: "../two-axis-tracker-controller-code/images/Automatic-Stow-Functions.jpg"
+                source: "../GUI-two-axis-tracker-controller/images/Automatic-Stow-Functions.jpg"
                 fillMode: Image.PreserveAspectFit
 
                 Text {
@@ -539,7 +539,7 @@ ApplicationWindow {
                 y: 2
                 width: 2065
                 height: 420
-                source: "../two-axis-tracker-controller-code/images/Tracker-Status.jpg"
+                source: "../GUI-two-axis-tracker-controller/images/Tracker-Status.jpg"
                 fillMode: Image.PreserveAspectFit
                 
 
@@ -740,7 +740,7 @@ ApplicationWindow {
                 y: 4
                 width: 683
                 height: 472
-                source: "../two-axis-tracker-controller-code/images/command_window.png"
+                source: "../GUI-two-axis-tracker-controller/images/command_window.png"
                 fillMode: Image.PreserveAspectFit
 
                 ComboBox {
