@@ -9,10 +9,10 @@ To change properties to view them on the GUI, go into gui_wrapper.py and change 
 The batch file creates a virtual environment and installs the required packages, so it will take a minute or so the first run, then instantly on subsequent runs.
 
 REQUIREMENTS:
-Python 3 must be installed on users computer and in Environment Variables
-  (To test: type "python --version" into command prompt to see if python is in environment variables)
-Pip must be installed on users computer and in Environment Variables
-  (To test: type "pip --version" into command prompt to see if python is in environment variables)
+Python 3 must be installed on users computer and in Environment Variables  
+  (To test: type "python --version" into command prompt to see if python is in environment variables)  
+Pip must be installed on users computer and in Environment Variables  
+  (To test: type "pip --version" into command prompt to see if Pip is in environment variables)  
 
 
 None of the buttons have functionality yet, as the API/Controller code has not been set up by the rest of the team so the buttons have nothing to communicate with.
