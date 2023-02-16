@@ -8,7 +8,7 @@ To change properties to view them on the GUI, go into gui_wrapper.py and change 
 
 The batch file creates a virtual environment and installs the required packages, so it will take a minute or so the first run, then instantly on subsequent runs.
 
-REQUIREMENTS:
+REQUIREMENTS:  
 Python 3 must be installed on users computer and in Environment Variables  
   (To test: type "python --version" into command prompt to see if python is in environment variables)  
 Pip must be installed on users computer and in Environment Variables  
