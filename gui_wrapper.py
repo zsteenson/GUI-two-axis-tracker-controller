@@ -3,7 +3,10 @@ import os
 import sys
 from PyQt5.QtGui import QGuiApplication
 from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer, QObject
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
 from datetime import datetime
 
 TIME_SERVER = "00:00:00"
@@ -115,6 +118,38 @@ engine.rootObjects()[0].setProperty('limitSwitchStatusDnAZ', limitSwitchStatusDn
 engine.rootObjects()[0].setProperty('limitSwitchStatusEaEl', limitSwitchStatusEaEl)
 engine.rootObjects()[0].setProperty('limitSwitchStatusDnEl', limitSwitchStatusDnEl)
 
-sys.exit(app.exec())
+#################################
+# Button Functionality
+#################################
 
-os.system('deactivate')   
+# Emergency Wind Stow
+def emergencyWindStow():
+    print('Emergency Wind Stow')
+    
+win = engine.rootObjects()[0]
+
+emergency_wind_stow = win.findChild(QObject, "emergency_wind_stow")
+emergency_wind_stow.messageRequired.connect(emergencyWindStow)
+
+# Run Command Button
+def runCommand():
+    print("Running Command...")
+    
+run_command = win.findChild(QObject, "run_command_button")
+run_command.messageRequired.connect(runCommand)
+
+# Upload Batch File Button
+def uploadBatchFile():
+    print("Uploading Batch File...")
+    
+upload_batch_file = win.findChild(QObject, "upload_batch_file")
+upload_batch_file.messageRequired.connect(uploadBatchFile)
+
+# Run Batch File Button
+def runBatchFile():
+    print("Running Batch File...")
+    
+run_batch_file = win.findChild(QObject, "run_batch_file")
+run_batch_file.messageRequired.connect(runBatchFile)
+
+sys.exit(app.exec()) 

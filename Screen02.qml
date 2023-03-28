@@ -47,7 +47,6 @@ ApplicationWindow {
     property string limitSwitchStatusEaEl: "00:00:00"
     property string limitSwitchStatusDnEl: "00:00:00"
 
-
     Rectangle {
         id: application_window
         visible: true
@@ -745,6 +744,7 @@ ApplicationWindow {
 
                 ComboBox {
                     id: drop_down_menu
+                    objectName: "drop_down_menu"
                     displayText: "SELECT OPTION"
                     editable: true
                     model: ListModel {
@@ -784,7 +784,9 @@ ApplicationWindow {
                 }
 
                 Button {
+                    signal messageRequired
                     id: run_command_button
+                    objectName: "run_command_button"
                     x: 47
                     y: 416
                     width: 327
@@ -795,6 +797,7 @@ ApplicationWindow {
                     icon.color: "#ff0000"
                     font.pointSize: 18
                     highlighted: true
+                    onClicked: messageRequired()
                 }
 
                 TextInput {
@@ -825,7 +828,7 @@ ApplicationWindow {
                         width: 158
                         height: 48
                         visible: false
-                        text: qsTr("Text Input")
+                        text: qsTr("")
                         font.pixelSize: 20
                         verticalAlignment: Text.AlignVCenter
                         font.bold: true
@@ -846,7 +849,7 @@ ApplicationWindow {
                         width: 158
                         height: 48
                         visible: false
-                        text: qsTr("Text Input")
+                        text: qsTr("")
                         font.pixelSize: 20
                         verticalAlignment: Text.AlignVCenter
                         font.bold: true
@@ -920,7 +923,9 @@ ApplicationWindow {
             border.width: 5
 
             Button {
-                id: emercency_wind_stow
+                signal messageRequired
+                id: emergency_wind_stow
+                objectName: "emergency_wind_stow"
                 x: 180
                 y: 16
                 width: 327
@@ -930,6 +935,7 @@ ApplicationWindow {
                 highlighted: true
                 font.bold: true
                 font.pointSize: 18
+                onClicked: messageRequired()
             }
         }
         Rectangle {
@@ -1030,7 +1036,9 @@ ApplicationWindow {
             color: "#e6e5e5"
             border.width: 5
             Button {
+                signal messageRequired
                 id: upload_batch_file
+                objectName: "upload_batch_file"
                 x: 77
                 y: 45
                 width: 250
@@ -1040,10 +1048,13 @@ ApplicationWindow {
                 highlighted: true
                 font.bold: true
                 icon.color: "#ff0000"
+                onClicked: messageRequired()
             }
 
             Button {
-                id: upload_batch_file1
+                signal messageRequired
+                id: run_batch_file
+                objectName: "run_batch_file"
                 x: 404
                 y: 45
                 width: 191
@@ -1053,6 +1064,7 @@ ApplicationWindow {
                 highlighted: true
                 icon.color: "#ff0000"
                 font.bold: true
+                onClicked: messageRequired()
             }
 
             Text {
